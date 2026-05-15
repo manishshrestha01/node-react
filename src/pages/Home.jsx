@@ -6,7 +6,7 @@ import axios from "axios";
 const Home = () => {
   const [blogs, setblogs] = useState([])
   const fetchBlogs = async () => {
-    const response = await axios.get("http://localhost:3000/blog");
+    const response = await axios.get("https://node-0imw.onrender.com/blog");
     console.log(response.data.data);
     setblogs(response.data.data)
   };

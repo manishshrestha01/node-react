@@ -9,7 +9,7 @@ function Blog() {
   const navigate = useNavigate();
   const [blog, setblog] = useState({});
   const fetchBlogs = async function getBlogs() {
-    const response = await axios.get("http://localhost:3000/blog/" + id);
+    const response = await axios.get("https://node-0imw.onrender.com/blog/" + id);
     setblog(response.data.data);
   };
 
@@ -17,7 +17,7 @@ function Blog() {
     fetchBlogs();
   }, []);
   const deletefunction = async () => {
-    const response = await axios.delete("http://localhost:3000/blog/" + id);
+    const response = await axios.delete("https://node-0imw.onrender.com/blog/" + id);
     console.log(response.status);
     if (response.status == 200) {
       alert("Deleted successfully");

@@ -18,7 +18,7 @@ function Edit() {
 
   const edit = async (e) => {
     e.preventDefault();
-    const response = await axios.patch("http://localhost:3000/blog/" + id, data, {
+    const response = await axios.patch("https://node-0imw.onrender.com/blog/" + id, data, {
       headers: {
         "Content-Type": "multipart/form-data",
       },
@@ -31,7 +31,7 @@ function Edit() {
   };
 
   const fetchBlogs = async () => {
-    const response = await axios.get("http://localhost:3000/blog/" + id);
+    const response = await axios.get("https://node-0imw.onrender.com/blog/" + id);
     if (response.status == 200) {
       setdata(response.data.data);
     } else {
